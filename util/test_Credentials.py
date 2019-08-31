@@ -1,9 +1,13 @@
 import unittest
+from util import credentials
 
 
-class MyTestCase(unittest.TestCase):
+class TestCredentials(unittest.TestCase):
     def test_something(self):
-        self.assertEqual(True, False)
+        """
+
+        :return:
+        """
 
 
 if __name__ == '__main__':
