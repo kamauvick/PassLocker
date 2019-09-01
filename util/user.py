@@ -1,12 +1,7 @@
 import random
 import string
 
-user_list = 'accounts.csv'
-
-
-def create_account_table():
-    with open(user_list, 'w'):
-        pass
+user_list = 'accounts.json'
 
 
 def login(username, password):
