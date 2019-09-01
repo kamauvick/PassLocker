@@ -26,7 +26,7 @@ def welcome_func():
     input_choice = input(welcome)
     while input_choice != 'q':
         if input_choice == '1':
-            pass
+            login()
         elif input_choice == '2':
             menu()
         else:
@@ -79,7 +79,9 @@ def menu():
 
 
 def login():
-    pass
+    username = input('Enter your username: ')
+    password = input('Enter your password: ')
+    user.login(username, password)
 
 
 def create_random_pass():
