@@ -1,14 +1,26 @@
 [
     {
         "": "\n",
-        "account": "dw",
-        "name": "ef",
-        "password": "fe"
+        "account": "facebook",
+        "name": "kamauvick",
+        "password": "23232323"
     },
     {
         "": "\n",
         "account": "twitter",
         "name": "kamauvick",
-        "password": "vick3445!"
+        "password": "vick3445"
+    },
+    {
+        "": "\n",
+        "account": "gmail",
+        "name": "vick344554431",
+        "password": "kamauvick343"
+    },
+    {
+        "": "\n",
+        "account": "linkedin",
+        "name": "victor waichigo",
+        "password": "kamauvick"
     }
 ]
