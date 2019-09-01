@@ -6,7 +6,7 @@ A python application that allows a user to create a new account , login to the a
 > Victor Waichigo K.
 
 ## Screenshots
-<img src="images/shot.png" width="1000">
+<img src="images/shot.png" width="1000" height="500">
 
 ## Installations
 
