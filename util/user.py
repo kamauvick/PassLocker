@@ -7,7 +7,13 @@ accounts = "accounts.json"
 
 def login(username, password):
     """ Log in a new user """
-    pass
+    global accounts
+    accounts = list_accounts()
+    for account in accounts:
+        if account['account'] == username and account['password'] == password:
+            return True
+        else:
+            print('Invalid username or password..')
 
 
 """
