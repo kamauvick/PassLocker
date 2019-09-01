@@ -1,13 +1,59 @@
+import pyfiglet
+from termcolor import cprint
+
 from util import user
 
-User_Choice = """
-Enter:  
-    - '1' to create a random password
-    - '2' to add a new account
-    - '3' to check for a user
-    - '4' to delete an account
-    - 'q' quit the application
-Your choice: """
+banner = cprint(pyfiglet.figlet_format('.    PassLocker    .'), 'yellow')
+
+welcome = f""" 
+ 
+***********************************************************
+*                                                         *
+*           Welcome to vick's Password Locker:            *
+*                                                         *
+***********************************************************
+\n
+User Menu:  
+    - 1: Login
+    - 2: Create a new account
+    - q: quit the application \n
+Choose an option:
+
+ """
+
+
+def welcome_func():
+    input_choice = input(welcome)
+    while input_choice != 'q':
+        if input_choice == '1':
+            pass
+        elif input_choice == '2':
+            menu()
+        else:
+            print('Invalid input..')
+        print('')
+        input_choice = input(welcome)
+    print(f'You choose option {input_choice}')
+    print('..bye bye')
+
+
+User_Choice = f"""  
+***********************************************************
+*                                                         *
+*              Create a new user Account:                 *
+*                                                         *
+***********************************************************
+\n
+New account user menu:  
+    - 1: to create a random password
+    - 2: to add a new account
+    - 3: to search for an account
+    - 4: to list all available accounts
+    - 5: to delete an account
+    - q: quit the application \n
+Your choice:
+
+ """
 
 
 def menu():
@@ -21,17 +67,23 @@ def menu():
         elif user_input == '3':
             find_accounts()
         elif user_input == '4':
+            list_accounts()
+        elif user_input == '5':
             delete_account()
         else:
             print('Unknown command')
         print('')
         user_input = input(User_Choice).lower()
     print('')
-    print('...Exiting the program')
+    print('...Your passwords are safe now!....exiting')
+
+
+def login():
+    pass
 
 
 def create_random_pass():
-    pass
+    print(user.random_pass())
 
 
 def create_new_account():
@@ -39,10 +91,21 @@ def create_new_account():
     name = input("Enter your Username: ")
     password = input('Enter the password: ')
     user.add_user(account, name, password)
+    print('')
+    print(f'Hello {name}, your account has been created successfully.')
+
+
+def list_accounts():
+    user.list_accounts()
+    print('')
+    for accounts in user.list_accounts():
+        print(accounts)
 
 
 def find_accounts():
     user_to_find = input('Enter the name you want to search for: ')
+    user.search_account(user_to_find)
+    print(user.search_account(user_to_find))
 
 
 def delete_account():
@@ -50,4 +113,5 @@ def delete_account():
     user.del_user(acc_name)
 
 
-menu()
+if __name__ == '__main__':
+    welcome_func()
