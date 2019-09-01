@@ -1,3 +1,6 @@
+import random
+import string
+
 user_list = 'accounts.csv'
 
 
@@ -9,6 +12,11 @@ def create_account_table():
 def login(username, password):
     """ Log in a new user """
     pass
+
+
+def random_pass():
+    return ''.join(
+        random.choice(string.ascii_letters + string.digits + ".',={}[]-/|\£$%^&*()_+~#@?><") for _ in range(10))
 
 
 def add_user(account, name, password, ):
@@ -41,8 +49,6 @@ def del_user(name):
     for user_account in user_accounts:
         if user_account['Account'] != name:
             _save_user_accounts(user_accounts)
-
-
 
 # @classmethod
 # def check_user(cls, username):
