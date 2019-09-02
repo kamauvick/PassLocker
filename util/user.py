@@ -33,7 +33,7 @@ def list_accounts():
 
 def random_pass():
     return ''.join(
-        random.choice(string.ascii_letters + string.digits + ".',={}[]-/|\£$%^&*()_+~#@?><") for _ in range(10))
+        random.choice(string.ascii_letters + string.digits + ".',={}[]-/|£$%^&*()_+~#@?><") for _ in range(10))
 
 
 def search_account(name):
