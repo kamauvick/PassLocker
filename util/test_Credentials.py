@@ -1,13 +1,10 @@
 import unittest
-from util import credentials
+from util.credentials import credentials
 
 
 class TestCredentials(unittest.TestCase):
-    def test_something(self):
-        """
-
-        :return:
-        """
+    def setUp(self):
+        self.new_creds = credentials('kamauvick', 'vick3445!')
 
 
 if __name__ == '__main__':
