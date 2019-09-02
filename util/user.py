@@ -16,12 +16,10 @@ def login(username, password):
             print('Invalid username or password..')
 
 
-"""
+def add_user(account, name, password):
+    """
 Add new users to the user_list array
 """
-
-
-def add_user(account, name, password):
     global accounts
     accounts = list_accounts()
     accounts.append({'account': account, 'name': name, 'password': password, '': '\n'})
