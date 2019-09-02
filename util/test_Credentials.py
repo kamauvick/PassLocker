@@ -1,10 +1,18 @@
 import unittest
-from util.credentials import credentials
 
 
 class TestCredentials(unittest.TestCase):
     def setUp(self):
-        self.new_creds = credentials('kamauvick', 'vick3445!')
+        pass
+
+    def tearDown(self):
+        pass
+
+    def test__init__(self):
+        """
+        Check is class was init
+        """
+        pass
 
 
 if __name__ == '__main__':

@@ -1,6 +1,8 @@
 import pyfiglet
+import pyperclip
 from termcolor import cprint
 
+from util import credentials
 from util import user
 
 banner = cprint(pyfiglet.figlet_format('.    PassLocker    .'), 'yellow')
@@ -81,11 +83,13 @@ def menu():
 def login():
     username = input('Enter your username: ')
     password = input('Enter your password: ')
-    user.login(username, password)
+    # user.login(username, password)
+    credentials.login(username, password)
 
 
 def create_random_pass():
     print(user.random_pass())
+    pyperclip.paste()
 
 
 def create_new_account():
