@@ -1,5 +1,5 @@
 # PassLocker
-A python application that allows a user to create a new account , login to the account using their username and password, store passwords with their respective accounts and generate passwords for the user
+A python application that allows a user to create a new account , login to the account using their username and password, store passwords with their respective accounts and generate passwords for the user.
 
 
 ## Author
@@ -9,14 +9,24 @@ A python application that allows a user to create a new account , login to the a
 <img src="images/shot.png" width="1000" height="500">
 
 ## Installations
+run
+
+>1. `` git clone https://github.com/kamauvick/PassLocker.git `` 
+>2. ``cd PassLocker``
+>3. To run the app,  use  ``` python3 app.py ```
+>4. To tun Tests,  use  `` python3 -m unittest``
 
 
 ## Setup
-
+> Install these first:
+* Python3
+* pyFiglet
+* pyperclip
+* Termcolor
 
 ## Technologies used
 * Python3
-* pyFiglet
+
 
 ## BDD(Behaviour Driven Development)
 > Login inputs
